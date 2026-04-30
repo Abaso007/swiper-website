@@ -39,9 +39,3 @@
     transform: rotate(360deg);
   }
 }
-
-.codesandbox-logo {
-  width: 16px;
-  height: 16px;
-  border: 2px solid var(--color-on-surface);
-}

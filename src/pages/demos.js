@@ -4,7 +4,7 @@ import { WithSidebarLayout } from '@/layouts/WithSidebarLayout';
 import { useLazyDemos } from '@/shared/use-lazy-demos';
 import demos from '@/demos.json';
 import uiinitiativeDemos from '@/uiinitiative-demos.json';
-import { openCodeSandbox } from '@/shared/codesandbox';
+import { openStackBlitz } from '@/shared/stackblitz';
 import { Button } from '@/components/Button';
 import PremiumUpsell from '@/components/PremiumUpsell';
 
@@ -128,7 +128,7 @@ export default function DemosPage() {
             </DemoButton>
             <div className="flex min-w-0 shrink-[10] items-center gap-1">
               <span className="font-mono text-xs sm:mr-0 sm:mt-0 hidden sm:block">
-                CodeSandbox:
+                StackBlitz:
               </span>
               {['Core', 'React', 'Vue', 'Element'].map((name) => {
                 if (
@@ -142,7 +142,7 @@ export default function DemosPage() {
                     type="button"
                     key={name}
                     onClick={(e) =>
-                      openCodeSandbox(e, title, folder, `${name.toLowerCase()}`)
+                      openStackBlitz(e, title, folder, `${name.toLowerCase()}`)
                     }
                   >
                     <img
