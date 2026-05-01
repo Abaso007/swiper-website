@@ -12,7 +12,7 @@ export default function SwiperStudioBanner({ className }) {
         className="h-6 w-6 relative"
       />
       <div className="shrink min-w-0 relative text-ellipsis overflow-hidden flex items-center">
-        All-new Swiper Studio V2 is here with a 50%-off launch offer
+        All-new Swiper Studio V2 is here
       </div>
     </a>
   );
