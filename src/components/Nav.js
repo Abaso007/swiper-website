@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import GithubStats from './GithubStats';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
-import SwiperStudioBanner from './SwiperStudioBanner';
+import SPHQBanner from './SPHQBanner';
 
 const Dropdown = ({ children, opened }) => {
   return (
@@ -84,7 +84,7 @@ export const Nav = ({ withSidebar = false }) => {
             'lg:justify-start lg:pl-80 2xl:!pl-4 2xl:!justify-center'
         )}
       >
-        <SwiperStudioBanner />
+        <SPHQBanner />
       </div>
 
       <div
