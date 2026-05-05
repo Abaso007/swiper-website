@@ -1,5 +1,25 @@
 [
   {
+    "createdAt": "2026-05-05T20:00:00.000Z",
+    "title": "CryptoNewsZ",
+    "link": "https://www.cryptonewsz.com/",
+    "plan": "Sponsor",
+    "ref": "https://opencollective.com/cryptonewsz",
+    "image": "cryptonewsz.png",
+    "endDate": "",
+    "active": true
+  },
+  {
+    "createdAt": "2026-05-05T20:00:00.000Z",
+    "title": "VeePN VPN",
+    "link": "https://veepn.com/vpn-apps/download-vpn-for-pc/",
+    "plan": "Sponsor",
+    "ref": "https://opencollective.com/veepn-vpn-user",
+    "image": "veepn.png",
+    "endDate": "",
+    "active": true
+  },
+  {
     "createdAt": "2026-05-04T20:00:00.000Z",
     "title": "humanizerfree",
     "link": "https://humanizerfree.com/",
