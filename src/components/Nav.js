@@ -5,6 +5,7 @@ import GithubStats from './GithubStats';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import SPHQBanner from './SPHQBanner';
+import UserExperiencedModal from './UserExperiencedModal';
 
 const Dropdown = ({ children, opened }) => {
   return (
@@ -48,6 +49,7 @@ export const Nav = ({ withSidebar = false }) => {
   const premiumNavDropdownRef = useRef(null);
   const [banner, setBanner] = useState('paneflow');
   const [bannerSet, setBannerSet] = useState(false);
+  const [uxdOpen, setUxdOpen] = useState(false);
   const onClick = (e) => {
     if (!docsNavDropdownRef.current.contains(e.target)) {
       setDocsNavOpened(false);
@@ -95,7 +97,7 @@ export const Nav = ({ withSidebar = false }) => {
         )}
       >
         <nav
-          className="mx-auto flex gap-4 h-16 rounded-full max-w-screen-sm items-center justify-between px-4 relative pointer-events-auto lg:mx-0 2xl:!mx-auto"
+          className="mx-auto flex gap-2 xs:gap-4 h-16 rounded-full max-w-screen-sm items-center justify-between px-4 relative pointer-events-auto lg:mx-0 2xl:!mx-auto"
           onPointerLeave={(e) => {
             if (e.pointerType === 'mouse') {
               setDocsNavOpened(false);
@@ -123,7 +125,7 @@ export const Nav = ({ withSidebar = false }) => {
             </span>
           </Link>
 
-          <ul className={`items-center relative flex gap-4`}>
+          <ul className={`items-center relative flex gap-2 xs:gap-4`}>
             <li className="group relative" ref={docsNavDropdownRef}>
               <div
                 className="cursor-pointer text-sm hover:text-primary active:opacity-50 duration-200"
@@ -250,7 +252,7 @@ export const Nav = ({ withSidebar = false }) => {
               >
                 Playground
               </Link>
-              <span className="absolute -right-3 -top-3 leading-[1] text-black font-bold bg-primary text-[10px] px-1.25 py-0.75 rounded-full pointer-events-none">
+              <span className="absolute -right-2 -top-2 leading-[1] text-black font-bold bg-primary text-[9px] px-1 py-0.5 rounded-full pointer-events-none">
                 NEW
               </span>
             </li>
@@ -317,6 +319,40 @@ export const Nav = ({ withSidebar = false }) => {
                 Blog
               </Link>
             </li> */}
+            <li className="group relative">
+              <button
+                type="button"
+                onPointerEnter={() => {
+                  setDocsNavOpened(false);
+                  setResourcesNavOpened(false);
+                  setPremiumNavOpened(false);
+                }}
+                onClick={() => {
+                  setUxdOpen(true);
+                  setDocsNavOpened(false);
+                  setResourcesNavOpened(false);
+                  setPremiumNavOpened(false);
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'uxd_modal_open', {
+                      event_category: 'newsletter',
+                      event_label: 'nav_button',
+                    });
+                  }
+                }}
+                aria-label="Open User Experienced newsletter"
+                title="User Experienced - weekly design picks"
+                className="flex items-center justify-center size-7 rounded-md overflow-hidden border border-outline hover:border-white/40 hover:opacity-90 active:opacity-50 duration-200 cursor-pointer"
+              >
+                <img
+                  src="/images/projects/uxd.svg"
+                  alt="User Experienced"
+                  className="size-full"
+                />
+              </button>
+              <span className="absolute -right-3 -top-2 leading-[1] text-black font-bold bg-primary text-[9px] px-1 py-0.5 rounded-full pointer-events-none">
+                NEW
+              </span>
+            </li>
             <li className="group relative ">
               <Link
                 href="https://github.com/nolimits4web/swiper"
@@ -337,6 +373,7 @@ export const Nav = ({ withSidebar = false }) => {
           </div>
         </nav>
       </div>
+      <UserExperiencedModal open={uxdOpen} onClose={() => setUxdOpen(false)} />
     </>
   );
 };

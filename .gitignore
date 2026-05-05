@@ -49,3 +49,5 @@ public/sitemap.xml
 src/shared/n4-sponsors.json
 .wrangler/
 .tsbuildinfo
+
+.dev.vars
