@@ -16,6 +16,20 @@ subscribeApp.post('/subscribe', async (c) => {
     return c.json({ error: 'Forbidden' }, 403);
   }
 
+  const ip =
+    c.req.header('cf-connecting-ip') ||
+    c.req.header('x-forwarded-for') ||
+    'unknown';
+  if (c.env.SUBSCRIBE_RATELIMIT) {
+    const { success } = await c.env.SUBSCRIBE_RATELIMIT.limit({ key: ip });
+    if (!success) {
+      return c.json(
+        { error: 'Too many requests. Please try again in a minute.' },
+        429
+      );
+    }
+  }
+
   const apiKey = c.env.BEEHIIV_API_KEY;
   const publicationId = c.env.BEEHIIV_PUBLICATION_ID;
   if (!apiKey || !publicationId) {

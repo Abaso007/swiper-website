@@ -48,6 +48,6 @@ public/sponsors-list.json
 public/sitemap.xml
 src/shared/n4-sponsors.json
 .wrangler/
-.tsbuildinfo
+tsconfig.tsbuildinfo
 
 .dev.vars
