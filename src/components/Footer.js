@@ -156,6 +156,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <a
+                  title="Start Page HQ - Your browser new tab as a personal dashboard with 50+ widgets"
+                  href="https://startpagehq.com"
+                  target="_blank"
+                >
+                  <img
+                    loading="lazy"
+                    src="/images/projects/startpagehq.svg"
+                    alt="Start Page HQ"
+                    className="inline-block size-6"
+                  />
+                </a>
+                <a
                   title="PaneFlow - Create Stunning Slideshows Visually. No Code Required"
                   href="https://paneflow.com"
                   target="_blank"
@@ -203,18 +215,7 @@ export default function Footer() {
                     className="inline-block size-6"
                   />
                 </a>
-                <a
-                  title="Start Page HQ - Your browser new tab as a personal dashboard with 50+ widgets"
-                  href="https://startpagehq.com"
-                  target="_blank"
-                >
-                  <img
-                    loading="lazy"
-                    src="/images/projects/startpagehq.svg"
-                    alt="Start Page HQ"
-                    className="inline-block size-6"
-                  />
-                </a>
+
                 <a
                   title="Cladd - A React UI kit for building actual apps"
                   href="https://cladd.io"
