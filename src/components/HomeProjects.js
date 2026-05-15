@@ -36,7 +36,12 @@ export default function HomeProjects() {
             'Your browser new tab as a personal dashboard with 50+ widgets, synced across all devices',
           logo: 'startpagehq.svg',
         },
-
+        {
+          url: 'https://cladd.io',
+          title: 'Cladd',
+          description: 'A React UI kit for building actual apps',
+          logo: 'cladd.svg',
+        },
         {
           url: 'https://framework7.io',
           title: 'Framework7',
@@ -51,12 +56,7 @@ export default function HomeProjects() {
             'Pixel perfect mobile UI components built with Tailwind CSS',
           logo: 'konsta.svg',
         },
-        {
-          url: 'https://atroposjs.com',
-          title: 'Atropos',
-          description: 'Stunning touch-friendly 3D parallax hover effects',
-          logo: 'atropos.svg',
-        },
+
         {
           url: 'https://fisper.app',
           title: 'Fisper',

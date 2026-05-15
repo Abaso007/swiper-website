@@ -216,6 +216,18 @@ export default function Footer() {
                   />
                 </a>
                 <a
+                  title="Cladd - A React UI kit for building actual apps"
+                  href="https://cladd.io"
+                  target="_blank"
+                >
+                  <img
+                    loading="lazy"
+                    src="/images/projects/cladd.svg"
+                    alt="Cladd - A React UI kit for building actual apps"
+                    className="inline-block size-6"
+                  />
+                </a>
+                <a
                   title="Fisper - Local AI Voice Dictation for macOS"
                   href="https://fisper.app"
                   target="_blank"
